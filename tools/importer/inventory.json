@@ -90,19 +90,19 @@
           "url": "https://www.marutisuzuki.com/more-from-us/maruti-suzuki-leasing/faq",
           "urlHash": "7671bfb619aaf812da91b5961ee0e20b3ae64376",
           "uuid": "7671bfb6-02-d56188ed7ea44a5e20bb3014bd5e44a3fb988093-1",
-          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[2]"
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[2]/div[1]/div[1]"
         },
         {
           "url": "https://www.marutisuzuki.com/more-from-us/maruti-suzuki-leasing/faq",
           "urlHash": "7671bfb619aaf812da91b5961ee0e20b3ae64376",
           "uuid": "7671bfb6-02-d56188ed7ea44a5e20bb3014bd5e44a3fb988093-2",
-          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[2]"
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[2]/div[1]/div[2]"
         },
         {
           "url": "https://www.marutisuzuki.com/more-from-us/maruti-suzuki-leasing/faq",
           "urlHash": "7671bfb619aaf812da91b5961ee0e20b3ae64376",
           "uuid": "7671bfb6-02-d56188ed7ea44a5e20bb3014bd5e44a3fb988093-3",
-          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[2]"
+          "xpath": "/html[1]/body[1]/div[2]/div[3]/div[2]/div[1]/div[3]"
         }
       ]
     }
