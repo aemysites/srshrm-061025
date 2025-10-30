@@ -1,0 +1,63 @@
+.hero-clinic-container .hero-clinic-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-clinic {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero-clinic h1,
+.hero-clinic h2,
+.hero-clinic h3,
+.hero-clinic h4,
+.hero-clinic h5,
+.hero-clinic h6,
+.hero-clinic p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero-clinic h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 74px;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.hero-clinic h2 {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.hero-clinic.no-image * {
+  color: var(--text-color);
+}
+
+.hero-clinic picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-clinic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-clinic {
+    padding: 40px 32px;
+  }
+}

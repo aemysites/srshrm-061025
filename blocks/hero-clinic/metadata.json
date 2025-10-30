@@ -1,0 +1,50 @@
+{
+  "variantName": "hero-clinic",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-10-30T06:17:22.093Z",
+  "sourceContext": {
+    "originUrl": "https://poliklinika.skoda-auto.cz/orl",
+    "originPage": "ORL medical clinic page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "clinic-hero",
+    "imagePattern": "large",
+    "textLength": "short"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading",
+    "headingMaxLength": 30,
+    "descriptionMaxLength": 100,
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "medical clinic pages",
+      "service landing pages",
+      "department pages"
+    ],
+    "notSuitableFor": [
+      "product pages with CTAs",
+      "marketing landing pages with buttons",
+      "pages requiring multiple actions"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "primaryColor": "#2c3e50",
+    "backgroundColor": "#ffffff",
+    "fontFamily": "system-ui",
+    "headingSize": "3rem",
+    "padding": "40px 24px"
+  },
+  "usage": {
+    "pagesUsing": ["/orl"],
+    "reuseCount": 1,
+    "lastUsed": "2025-10-30T06:17:22.093Z"
+  }
+}

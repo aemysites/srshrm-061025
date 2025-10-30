@@ -1,0 +1,55 @@
+{
+  "variantName": "cards-recipe",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2025-10-29T17:28:33.222Z",
+  "sourceContext": {
+    "originUrl": "https://familylikefriends.com/fantasy-recipes/recipe-listing.html",
+    "originPage": "recipe listing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "recipe-listing",
+    "imagePattern": "large",
+    "textLength": "short"
+  },
+  "contentPattern": {
+    "structure": "image + title + rating + time + difficulty",
+    "headingMaxLength": 50,
+    "descriptionMaxLength": 100,
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "recipe listing pages",
+      "food and cooking content",
+      "tiffin box recipes",
+      "quick meal ideas"
+    ],
+    "notSuitableFor": [
+      "blog post cards",
+      "product cards with pricing",
+      "team member profiles",
+      "text-only content"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "primaryColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "cardBackground": "#f9eec4",
+    "fontFamily": "inherit",
+    "headingSize": "inherit",
+    "padding": "16px"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/fantasy-recipes/recipe-listing"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2025-10-29T17:28:33.222Z"
+  }
+}

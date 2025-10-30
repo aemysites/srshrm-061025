@@ -1,0 +1,80 @@
+.tabs-recipe {
+  margin: 24px 0;
+}
+
+.tabs-recipe .tabs-list {
+  display: flex;
+  gap: 12px;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  padding: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tabs-recipe .tabs-list button {
+  flex: 0 0 auto;
+  margin: 0;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 24px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.tabs-recipe .tabs-list button:hover {
+  background-color: #fef5d4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tabs-recipe .tabs-list button p {
+  margin: 0;
+}
+
+.tabs-recipe .tabs-list button[aria-selected='true'] {
+  background-color: #f9eec4;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: default;
+}
+
+.tabs-recipe .tabs-panel {
+  padding: 0;
+  border: none;
+  overflow: visible;
+}
+
+.tabs-recipe .tabs-panel[aria-hidden='true'],
+.tabs-panel[aria-hidden='true'] {
+  display: none !important;
+}
+
+/* Responsive adjustments */
+@media (width >= 600px) {
+  .tabs-recipe .tabs-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .tabs-recipe .tabs-list button {
+    font-size: 15px;
+    padding: 12px 28px;
+  }
+}
+
+@media (width >= 900px) {
+  .tabs-recipe .tabs-list button {
+    font-size: 16px;
+    padding: 12px 32px;
+  }
+}

@@ -1,0 +1,61 @@
+.table-clinic.block {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-clinic.block table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  border: none;
+}
+
+.table-clinic.block table thead tr {
+  border: none;
+}
+
+.table-clinic.block table tbody tr {
+  border: none;
+}
+
+.table-clinic.block table th {
+  font-weight: 700;
+}
+
+.table-clinic.block table th,
+.table-clinic.block table td {
+  padding: 0 16px;
+  text-align: left;
+}
+
+.table-clinic.block table td {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.table-clinic table th p,
+.table-clinic table td p {
+  margin: 0;
+}
+
+.table-clinic table td p + p {
+  margin-top: 0.25em;
+}
+
+/* no header variant */
+.table-clinic.block.no-header table tbody tr {
+  border-top: 1px solid;
+}
+
+/* striped variant */
+.table-clinic.block.striped tbody tr:nth-child(odd) {
+  background-color: var(--overlay-background-color);
+}
+
+/* bordered variant */
+.table-clinic.block.bordered table th,
+.table-clinic.block.bordered table td {
+  border: 1px solid;
+}

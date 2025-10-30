@@ -1,0 +1,55 @@
+{
+  "variantName": "tabs-recipe",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2025-10-29T17:28:33.411Z",
+  "sourceContext": {
+    "originUrl": "https://familylikefriends.com/fantasy-recipes/recipe-listing.html",
+    "originPage": "recipe listing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "recipe-navigation",
+    "imagePattern": "noimg",
+    "textLength": "short"
+  },
+  "contentPattern": {
+    "structure": "tab labels for recipe categories",
+    "headingMaxLength": 40,
+    "descriptionMaxLength": 0,
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "recipe category navigation",
+      "food content filtering",
+      "meal type categorization",
+      "cooking difficulty levels"
+    ],
+    "notSuitableFor": [
+      "general content tabs",
+      "product feature tabs",
+      "FAQ sections",
+      "tutorial steps"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "primaryColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "tabBackground": "#f5f5f5",
+    "fontFamily": "inherit",
+    "headingSize": "inherit",
+    "padding": "0.5em"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/fantasy-recipes/recipe-listing"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2025-10-29T17:28:33.411Z"
+  }
+}

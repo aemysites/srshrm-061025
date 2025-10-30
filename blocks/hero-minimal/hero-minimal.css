@@ -1,0 +1,47 @@
+.hero-container .hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-minimal {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero-minimal h1,
+.hero-minimal h2,
+.hero-minimal h3,
+.hero-minimal h4,
+.hero-minimal h5,
+.hero-minimal h6,
+.hero-minimal p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero-minimal.no-image * {
+  color: var(--text-color);
+}
+
+.hero-minimal picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-minimal img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-minimal {
+    padding: 40px 32px;
+  }
+}

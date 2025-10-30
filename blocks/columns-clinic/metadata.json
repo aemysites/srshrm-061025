@@ -1,0 +1,50 @@
+{
+  "variantName": "columns-clinic",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-10-30T06:17:22.173Z",
+  "sourceContext": {
+    "originUrl": "https://poliklinika.skoda-auto.cz/orl",
+    "originPage": "ORL medical clinic page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "info-display",
+    "imagePattern": "noimg",
+    "textLength": "long"
+  },
+  "contentPattern": {
+    "structure": "2-column layout with tables + contact info",
+    "headingMaxLength": 60,
+    "descriptionMaxLength": 500,
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "information pages",
+      "schedule/contact pages",
+      "service details pages"
+    ],
+    "notSuitableFor": [
+      "image-heavy galleries",
+      "product showcases",
+      "marketing content"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "primaryColor": "#2c3e50",
+    "backgroundColor": "#ffffff",
+    "fontFamily": "system-ui",
+    "headingSize": "1.5rem",
+    "padding": "24px"
+  },
+  "usage": {
+    "pagesUsing": ["/orl"],
+    "reuseCount": 1,
+    "lastUsed": "2025-10-30T06:17:22.173Z"
+  }
+}
