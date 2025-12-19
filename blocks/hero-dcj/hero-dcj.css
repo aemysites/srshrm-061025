@@ -1,0 +1,154 @@
+/**
+ * Hero DCJ Block - NSW Government Department of Communities and Justice
+ * Pixel-perfect implementation matching https://dcj.nsw.gov.au/
+ */
+
+/* Container reset - full width wrapper */
+.hero-dcj-container {
+  max-width: 100%;
+}
+
+.hero-dcj-container .hero-dcj-wrapper {
+  max-width: var(--nsw-container-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--nsw-spacing-md);
+}
+
+/* Main hero block */
+.hero-dcj {
+  background-color: var(--nsw-white);
+  padding: 88px 0;
+  font-family: var(--body-font-family);
+}
+
+.hero-dcj-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nsw-spacing-xl);
+}
+
+/* Content section (left column on desktop) */
+.hero-dcj-content {
+  flex: 1;
+}
+
+.hero-dcj-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--nsw-text-dark);
+  margin: 0 0 var(--nsw-spacing-md) 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.hero-dcj-content p {
+  font-size: 20px;
+  color: var(--nsw-text-dark);
+  line-height: 1.4;
+  margin: var(--nsw-spacing-md) 0 0 0;
+  max-width: 600px;
+}
+
+/* Helpline panel (right column on desktop) */
+.hero-dcj-helpline {
+  border-left: 2px solid var(--nsw-brand-accent);
+  padding-left: var(--nsw-spacing-md);
+}
+
+.hero-dcj-helpline-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--nsw-text-dark);
+  margin: 0 0 var(--nsw-spacing-md) 0;
+}
+
+.hero-dcj-helpline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-dcj-helpline-list li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--nsw-text-dark);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--nsw-spacing-sm);
+}
+
+.hero-dcj-phone-link {
+  color: var(--nsw-brand-dark);
+  text-decoration: underline;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-dcj-phone-link:hover {
+  text-decoration: none;
+}
+
+.hero-dcj-phone-link:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
+}
+
+/* Desktop layout - 992px+ */
+@media (width >= 992px) {
+  .hero-dcj-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--nsw-spacing-xxl);
+  }
+
+  .hero-dcj-content {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .hero-dcj-helpline {
+    flex: 0 0 auto;
+    width: 33.33%;
+    max-width: 400px;
+  }
+}
+
+/* Tablet layout - 768px to 991px */
+@media (width >= 768px) and (width < 992px) {
+  .hero-dcj {
+    padding: 64px 0;
+  }
+
+  .hero-dcj-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-dcj-content p {
+    font-size: 18px;
+  }
+}
+
+/* Mobile layout - below 768px */
+@media (width < 768px) {
+  .hero-dcj {
+    padding: var(--nsw-spacing-xl) 0;
+  }
+
+  .hero-dcj-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-dcj-content p {
+    font-size: 16px;
+  }
+
+  .hero-dcj-helpline-title {
+    font-size: 18px;
+  }
+
+  .hero-dcj-helpline-list li {
+    font-size: 14px;
+  }
+}

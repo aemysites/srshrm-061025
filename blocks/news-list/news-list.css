@@ -1,0 +1,194 @@
+/**
+ * News List Block - NSW Government Design System
+ * Pixel-perfect implementation matching https://dcj.nsw.gov.au/
+ */
+
+.news-list {
+  padding: var(--nsw-spacing-xl) 0;
+  font-family: var(--body-font-family);
+}
+
+/* Two-column wrapper */
+.news-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nsw-spacing-lg);
+}
+
+/* Image column (left on desktop) */
+.news-list-image {
+  flex-shrink: 0;
+}
+
+.news-list-image picture {
+  display: block;
+}
+
+.news-list-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Content column (right on desktop) */
+.news-list-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--nsw-spacing-md);
+}
+
+/* Heading */
+.news-list-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--nsw-text-dark);
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Table styles */
+.news-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+.news-list-table thead th {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nsw-text-dark);
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--nsw-text-dark);
+  text-align: left;
+}
+
+/* Date column header - right aligned */
+.news-list-table thead th:last-child {
+  text-align: right;
+  width: 100px;
+}
+
+/* Table body cells */
+.news-list-table tbody td {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--nsw-text-dark);
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--nsw-text-dark);
+  vertical-align: baseline;
+}
+
+/* News link - underlined style */
+.news-list-link,
+.news-list-link:any-link {
+  color: var(--nsw-brand-dark);
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.news-list-link:hover {
+  color: var(--nsw-brand-accent, #d7153a);
+  text-decoration: underline;
+}
+
+.news-list-link:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
+}
+
+/* Date cell - right aligned */
+.news-list-date {
+  text-align: right;
+  white-space: nowrap;
+  color: var(--nsw-text-dark);
+}
+
+/* CTA Button - outline style */
+.news-list .news-list-cta,
+.news-list .news-list-cta:any-link,
+.news-list a.button.news-list-cta {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nsw-brand-dark);
+  text-decoration: none;
+  padding: 10px 22px;
+  background-color: var(--nsw-white);
+  border: 2px solid var(--nsw-brand-dark);
+  border-radius: 4px;
+  margin-top: var(--nsw-spacing-md);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: fit-content;
+}
+
+.news-list .news-list-cta:hover,
+.news-list a.button.news-list-cta:hover {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+  text-decoration: none;
+}
+
+.news-list .news-list-cta:focus,
+.news-list a.button.news-list-cta:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
+}
+
+/* Tablet layout - 768px+ */
+@media (width >= 768px) {
+  .news-list-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--nsw-spacing-xl);
+  }
+
+  .news-list-image {
+    width: 40%;
+    max-width: 480px;
+  }
+
+  .news-list-content {
+    flex: 1;
+  }
+
+  .news-list-content h2 {
+    font-size: 32px;
+  }
+}
+
+/* Desktop layout - 992px+ */
+@media (width >= 992px) {
+  .news-list-image {
+    width: 45%;
+  }
+}
+
+/* Mobile layout - below 768px */
+@media (width < 768px) {
+  .news-list {
+    padding: var(--nsw-spacing-lg) 0;
+  }
+
+  .news-list-content h2 {
+    font-size: 24px;
+  }
+
+  .news-list-table thead th,
+  .news-list-table tbody td {
+    padding: 10px 4px;
+    font-size: 14px;
+  }
+
+  .news-list-link {
+    font-size: 14px;
+  }
+
+  .news-list-cta {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}

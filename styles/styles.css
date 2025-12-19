@@ -1,91 +1,170 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * DCJ NSW Government Design System
+ * Migrated from https://dcj.nsw.gov.au/
+ * Based on NSW Government Design System v3
  */
 
 :root {
-  /* colors - Skoda brand */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #161718;
-  --text-color: #212529;
-  --link-color: #4ba82e;
-  --link-hover-color: #3a8724;
-  --accent-color: #4ba82e;
-  --warning-color: #ffc107;
+  /* ===== NSW COLOR PALETTE ===== */
 
-  /* section colors */
-  --section-dark-bg: rgba(0, 0, 0, 0.7);
-  --section-dark-text: white;
-  --section-light-bg: #f5f5f5;
-  --section-light-text: #161718;
+  /* Brand Colors */
+  --nsw-brand-dark: #002664;
+  --nsw-brand-light: #cbedfd;
+  --nsw-brand-supplementary: #146cfd;
+  --nsw-brand-accent: #d7153a;
 
-  /* fonts - Skoda Next */
-  --body-font-family: "Skoda Next", roboto, roboto-fallback, sans-serif;
-  --heading-font-family: "Skoda Next", roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* Blue Palette */
+  --nsw-palette-blue-01: #002664;
+  --nsw-palette-blue-02: #146cfd;
+  --nsw-palette-blue-03: #8ce0ff;
+  --nsw-palette-blue-04: #cbedfd;
 
-  /* body sizes */
-  --body-font-size-m: 18px;
-  --body-font-size-s: 16px;
-  --body-font-size-xs: 14px;
+  /* Grey Palette */
+  --nsw-black: #000;
+  --nsw-grey-01: #22272b;
+  --nsw-grey-02: #495054;
+  --nsw-grey-03: #cdd3d6;
+  --nsw-grey-04: #ebebeb;
+  --nsw-off-white: #f2f2f2;
+  --nsw-white: #fff;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 64px;
-  --heading-font-size-xl: 36px;
-  --heading-font-size-l: 27px;
-  --heading-font-size-m: 22px;
-  --heading-font-size-s: 18px;
-  --heading-font-size-xs: 16px;
+  /* Status Colors */
+  --nsw-status-success: #008a07;
+  --nsw-status-success-bg: #e5f6e6;
+  --nsw-status-info: #2e5299;
+  --nsw-status-info-bg: #eaedf4;
+  --nsw-status-warning: #c95000;
+  --nsw-status-warning-bg: #fbeee5;
+  --nsw-status-error: #b81237;
+  --nsw-status-error-bg: #f7e7eb;
 
-  /* nav height */
+  /* Text Colors */
+  --nsw-text-dark: #22272b;
+  --nsw-text-light: #fff;
+
+  /* Link Colors */
+  --nsw-link: #002664;
+  --nsw-link-light: #e6e9f0;
+  --nsw-visited: #551a8b;
+  --nsw-hover: rgba(0, 38, 100, 0.1);
+  --nsw-active: rgba(0, 38, 100, 0.2);
+  --nsw-focus: #0086b3;
+  --nsw-disabled: #8093b2;
+
+  /* ===== TYPOGRAPHY ===== */
+
+  /* Font Family */
+  --nsw-font-family: "Public Sans", sans-serif;
+  --nsw-font-normal: 400;
+  --nsw-font-bold: 700;
+
+  /* Font Sizes - Mobile */
+  --nsw-font-size-xxs-mobile: 0.75rem;    /* 12px */
+  --nsw-font-size-xs-mobile: 0.875rem;    /* 14px */
+  --nsw-font-size-sm-mobile: 1rem;        /* 16px */
+  --nsw-font-size-md-mobile: 1.125rem;    /* 18px */
+  --nsw-font-size-lg-mobile: 1.375rem;    /* 22px */
+  --nsw-font-size-xl-mobile: 1.75rem;     /* 28px */
+  --nsw-font-size-xxl-mobile: 2.25rem;    /* 36px */
+
+  /* Font Sizes - Desktop */
+  --nsw-font-size-xxs-desktop: 0.75rem;   /* 12px */
+  --nsw-font-size-xs-desktop: 0.875rem;   /* 14px */
+  --nsw-font-size-sm-desktop: 1rem;       /* 16px */
+  --nsw-font-size-md-desktop: 1.25rem;    /* 20px */
+  --nsw-font-size-lg-desktop: 1.5rem;     /* 24px */
+  --nsw-font-size-xl-desktop: 2rem;       /* 32px */
+  --nsw-font-size-xxl-desktop: 3rem;      /* 48px */
+
+  /* Line Heights */
+  --nsw-line-height-xxs: 1.5;
+  --nsw-line-height-xs: 1.35;
+  --nsw-line-height-sm: 1.5;
+  --nsw-line-height-md: 1.33;
+  --nsw-line-height-lg: 1.25;
+  --nsw-line-height-xl: 1.25;
+  --nsw-line-height-xxl: 1.25;
+
+  /* ===== SPACING ===== */
+  --nsw-spacing-xs: 0.5rem;   /* 8px */
+  --nsw-spacing-sm: 1rem;     /* 16px */
+  --nsw-spacing-md: 1.5rem;   /* 24px */
+  --nsw-spacing-lg: 2rem;     /* 32px */
+  --nsw-spacing-xl: 3rem;     /* 48px */
+  --nsw-spacing-xxl: 4rem;    /* 64px */
+
+  /* ===== LAYOUT ===== */
+  --nsw-container-width: 75rem;  /* 1200px */
+  --nsw-border-radius: 0.25rem;  /* 4px */
+  --nsw-border-width: 1px;
+  --nsw-border-style: solid;
+  --nsw-box-shadow: 0 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.15);
+
+  /* ===== TRANSITIONS ===== */
+  --nsw-transition-duration: 0.25s;
+  --nsw-transition-timing: ease-in-out;
+
+  /* ===== EDS MAPPINGS ===== */
+  /* Map NSW tokens to standard EDS variables */
+  --background-color: var(--nsw-white);
+  --light-color: var(--nsw-off-white);
+  --dark-color: var(--nsw-grey-01);
+  --text-color: var(--nsw-text-dark);
+  --link-color: var(--nsw-link);
+  --link-hover-color: var(--nsw-brand-dark);
+  --accent-color: var(--nsw-brand-accent);
+
+  /* Font family mappings */
+  --body-font-family: var(--nsw-font-family);
+  --heading-font-family: var(--nsw-font-family);
+
+  /* Body sizes */
+  --body-font-size-m: var(--nsw-font-size-sm-mobile);
+  --body-font-size-s: var(--nsw-font-size-xs-mobile);
+  --body-font-size-xs: var(--nsw-font-size-xxs-mobile);
+
+  /* Heading sizes - mobile first */
+  --heading-font-size-xxl: var(--nsw-font-size-xxl-mobile);
+  --heading-font-size-xl: var(--nsw-font-size-xl-mobile);
+  --heading-font-size-l: var(--nsw-font-size-lg-mobile);
+  --heading-font-size-m: var(--nsw-font-size-md-mobile);
+  --heading-font-size-s: var(--nsw-font-size-sm-mobile);
+  --heading-font-size-xs: var(--nsw-font-size-xs-mobile);
+
+  /* Section colors */
+  --section-dark-bg: var(--nsw-brand-dark);
+  --section-dark-text: var(--nsw-white);
+  --section-light-bg: var(--nsw-off-white);
+  --section-light-text: var(--nsw-text-dark);
+
+  /* Navigation */
   --nav-height: 65px;
   --header-height: var(--nav-height);
-
-  /* spacing */
-  --spacing-xs: 8px;
-  --spacing-s: 16px;
-  --spacing-m: 24px;
-  --spacing-l: 32px;
-  --spacing-xl: 48px;
-  --spacing-xxl: 64px;
 }
 
-/* fallback fonts */
+/* Fallback fonts for Public Sans */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: public-sans-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
+/* Desktop breakpoint - larger typography */
+@media (width >= 992px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    --body-font-size-m: var(--nsw-font-size-sm-desktop);
+    --body-font-size-s: var(--nsw-font-size-xs-desktop);
 
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    --heading-font-size-xxl: var(--nsw-font-size-xxl-desktop);
+    --heading-font-size-xl: var(--nsw-font-size-xl-desktop);
+    --heading-font-size-l: var(--nsw-font-size-lg-desktop);
+    --heading-font-size-m: var(--nsw-font-size-md-desktop);
+    --heading-font-size-s: var(--nsw-font-size-sm-desktop);
+    --heading-font-size-xs: var(--nsw-font-size-xs-desktop);
   }
 }
+
+/* ===== BASE STYLES ===== */
 
 body {
   display: none;
@@ -94,7 +173,9 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: var(--nsw-line-height-sm);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.appear {
@@ -115,43 +196,51 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* ===== TYPOGRAPHY ===== */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: var(--heading-font-family);
-  font-weight: 700;
-  line-height: 1.25;
+  font-weight: var(--nsw-font-bold);
+  line-height: var(--nsw-line-height-lg);
+  color: var(--nsw-text-dark);
   scroll-margin: 40px;
 }
 
 h1 {
   font-size: var(--heading-font-size-xxl);
+  line-height: var(--nsw-line-height-xxl);
 }
 
 h2 {
   font-size: var(--heading-font-size-xl);
+  line-height: var(--nsw-line-height-xl);
 }
 
 h3 {
   font-size: var(--heading-font-size-l);
-  font-weight: 700;
+  line-height: var(--nsw-line-height-lg);
 }
 
 h4 {
   font-size: var(--heading-font-size-m);
+  line-height: var(--nsw-line-height-md);
 }
 
 h5 {
   font-size: var(--heading-font-size-s);
+  line-height: var(--nsw-line-height-sm);
 }
 
 h6 {
   font-size: var(--heading-font-size-xs);
+  line-height: var(--nsw-line-height-xs);
 }
 
 p,
@@ -160,91 +249,171 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: var(--nsw-spacing-sm);
+}
+
+p + h2,
+p + h3,
+p + h4 {
+  margin-top: var(--nsw-spacing-lg);
 }
 
 code,
 pre {
   font-size: var(--body-font-size-s);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 pre {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: var(--light-color);
+  padding: var(--nsw-spacing-sm);
+  border-radius: var(--nsw-border-radius);
+  background-color: var(--nsw-grey-04);
   overflow-x: auto;
   white-space: pre;
 }
 
-main > div {
-  margin: 40px 16px;
+strong,
+b {
+  font-weight: var(--nsw-font-bold);
 }
 
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
+/* ===== LINKS ===== */
 
-/* links */
 a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
+  color: var(--nsw-link);
+  text-decoration: underline;
   overflow-wrap: break-word;
+  transition: color var(--nsw-transition-duration) var(--nsw-transition-timing);
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+  color: var(--nsw-brand-dark);
+  background-color: var(--nsw-hover);
 }
 
-/* buttons */
+a:active {
+  background-color: var(--nsw-active);
+}
+
+a:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 0;
+}
+
+a:visited {
+  color: var(--nsw-visited);
+}
+
+/* ===== BUTTONS ===== */
+
+/* Primary Button (Default) */
 a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
+  margin: var(--nsw-spacing-xs) 0;
   border: 2px solid transparent;
-  border-radius: 50px;
-  padding: 0.5em 1.2em;
+  border-radius: var(--nsw-border-radius);
+  padding: 10px 22px;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
+  font-weight: var(--nsw-font-bold);
+  font-size: var(--body-font-size-m);
+  line-height: var(--nsw-line-height-sm);
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: background-color var(--nsw-transition-duration) var(--nsw-transition-timing),
+              border-color var(--nsw-transition-duration) var(--nsw-transition-timing),
+              color var(--nsw-transition-duration) var(--nsw-transition-timing);
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: #001a4d;
+  color: var(--nsw-white);
+  text-decoration: none;
   cursor: pointer;
+}
+
+a.button:focus,
+button:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
 }
 
 button:disabled,
 button:disabled:hover {
-  background-color: var(--light-color);
-  cursor: unset;
+  background-color: var(--nsw-disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
+/* Secondary/Outline Button */
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid var(--nsw-brand-dark);
+  color: var(--nsw-brand-dark);
 }
+
+a.button.secondary:hover,
+a.button.secondary:focus,
+button.secondary:hover,
+button.secondary:focus {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+}
+
+/* Dark Outline Button (for light backgrounds) */
+a.button.dark-outline,
+button.dark-outline {
+  background-color: var(--nsw-white);
+  border: 2px solid var(--nsw-brand-dark);
+  color: var(--nsw-brand-dark);
+}
+
+a.button.dark-outline:hover,
+a.button.dark-outline:focus,
+button.dark-outline:hover,
+button.dark-outline:focus {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+}
+
+/* Light Button (for dark backgrounds) */
+a.button.light,
+button.light {
+  background-color: var(--nsw-white);
+  color: var(--nsw-text-dark);
+  border: 2px solid transparent;
+}
+
+a.button.light:hover,
+a.button.light:focus,
+button.light:hover,
+button.light:focus {
+  background-color: var(--nsw-grey-04);
+  color: var(--nsw-text-dark);
+}
+
+/* Pill Button (rounded) */
+a.button.pill,
+button.pill {
+  border-radius: 24px;
+  padding: 8px 24px;
+}
+
+/* ===== IMAGES ===== */
 
 main img {
   max-width: 100%;
@@ -263,70 +432,212 @@ main img {
   width: 100%;
 }
 
-/* tables */
+/* ===== FORM ELEMENTS ===== */
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+  padding: var(--nsw-spacing-xs) var(--nsw-spacing-sm);
+  border: var(--nsw-border-width) var(--nsw-border-style) var(--nsw-grey-02);
+  border-radius: var(--nsw-border-radius);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: var(--nsw-line-height-sm);
+  background-color: var(--nsw-white);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 0;
+  border-color: var(--nsw-brand-dark);
+}
+
+/* ===== TABLES ===== */
+
 main table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5em 0;
+  margin: var(--nsw-spacing-md) 0;
 }
 
 main table thead {
-  border-bottom: 2px solid var(--dark-color);
+  border-bottom: 2px solid var(--nsw-grey-01);
 }
 
 main table th {
   text-align: left;
-  padding: 12px 16px;
-  font-weight: 700;
+  padding: var(--nsw-spacing-sm);
+  font-weight: var(--nsw-font-bold);
   font-size: var(--body-font-size-s);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: var(--nsw-grey-02);
 }
 
 main table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: var(--nsw-spacing-sm);
+  border-bottom: 1px solid var(--nsw-grey-03);
 }
 
 main table tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* sections */
+/* ===== LISTS ===== */
+
+ul,
+ol {
+  padding-left: var(--nsw-spacing-md);
+}
+
+li {
+  margin-bottom: var(--nsw-spacing-xs);
+}
+
+/* ===== LAYOUT - SECTIONS ===== */
+
+main > div {
+  margin: var(--nsw-spacing-lg) var(--nsw-spacing-sm);
+}
+
 main > .section {
-  margin: 40px 0;
+  margin: var(--nsw-spacing-lg) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--nsw-container-width);
   margin: auto;
-  padding: 0 24px;
+  padding: 0 var(--nsw-spacing-sm);
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
+@media (width >= 992px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 var(--nsw-spacing-lg);
   }
 }
 
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--section-light-bg);
-  color: var(--section-light-text);
+/* ===== SECTION VARIANTS ===== */
+
+/* Brand Dark Section */
+main .section.brand-dark,
+main .section.nsw-dark {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--nsw-spacing-lg) 0;
 }
 
-main .section.dark {
-  background-color: var(--section-dark-bg);
-  color: var(--section-dark-text);
+main .section.brand-dark h1,
+main .section.brand-dark h2,
+main .section.brand-dark h3,
+main .section.brand-dark h4,
+main .section.brand-dark h5,
+main .section.brand-dark h6,
+main .section.brand-dark p,
+main .section.nsw-dark h1,
+main .section.nsw-dark h2,
+main .section.nsw-dark h3,
+main .section.nsw-dark h4,
+main .section.nsw-dark h5,
+main .section.nsw-dark h6,
+main .section.nsw-dark p {
+  color: var(--nsw-white);
+}
+
+main .section.brand-dark a:any-link,
+main .section.nsw-dark a:any-link {
+  color: var(--nsw-white);
+}
+
+main .section.brand-dark a:hover,
+main .section.nsw-dark a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main .section.brand-dark a.button:any-link,
+main .section.nsw-dark a.button:any-link {
+  background-color: var(--nsw-white);
+  color: var(--nsw-brand-dark);
+  border-color: transparent;
+}
+
+main .section.brand-dark a.button:hover,
+main .section.nsw-dark a.button:hover {
+  background-color: var(--nsw-grey-04);
+}
+
+main .section.brand-dark a.button.secondary,
+main .section.nsw-dark a.button.secondary {
+  background-color: transparent;
+  color: var(--nsw-white);
+  border-color: var(--nsw-white);
+}
+
+main .section.brand-dark a.button.secondary:hover,
+main .section.nsw-dark a.button.secondary:hover {
+  background-color: var(--nsw-white);
+  color: var(--nsw-brand-dark);
+}
+
+/* Brand Light Section */
+main .section.brand-light {
+  background-color: var(--nsw-brand-light);
+  color: var(--nsw-text-dark);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--nsw-spacing-lg) 0;
+}
+
+/* White Section */
+main .section.white {
+  background-color: var(--nsw-white);
+  color: var(--nsw-text-dark);
+  margin: 0;
+  padding: var(--nsw-spacing-lg) 0;
+}
+
+/* Off-White/Light Section */
+main .section.light,
+main .section.highlight,
+main .section.off-white {
+  background-color: var(--nsw-off-white);
+  color: var(--nsw-text-dark);
+  margin: 0;
+  padding: var(--nsw-spacing-lg) 0;
+}
+
+/* Grey Section */
+main .section.grey {
+  background-color: var(--nsw-grey-04);
+  color: var(--nsw-text-dark);
+  margin: 0;
+  padding: var(--nsw-spacing-lg) 0;
+}
+
+/* Dark Section (legacy support) */
+main .section.dark {
+  background-color: var(--nsw-grey-01);
+  color: var(--nsw-white);
+  margin: 0;
+  padding: var(--nsw-spacing-lg) 0;
 }
 
 main .section.dark h1,
@@ -336,38 +647,95 @@ main .section.dark h4,
 main .section.dark h5,
 main .section.dark h6,
 main .section.dark p {
-  color: var(--section-dark-text);
+  color: var(--nsw-white);
 }
 
+main .section.dark a:any-link {
+  color: var(--nsw-white);
+}
+
+/* Hidden section */
 .section.hidden {
   display: none;
 }
 
-/* Warning text styling */
-.warning-text {
-  color: var(--warning-color);
-  font-style: normal;
+/* ===== UTILITY CLASSES ===== */
+
+/* Text colors */
+.text-dark {
+  color: var(--nsw-text-dark);
 }
 
-/* Parent-block pattern: sections that should be columns */
-@media (width >= 900px) {
-  /* Container for column sections */
-  main {
-    display: block;
-  }
+.text-light {
+  color: var(--nsw-text-light);
+}
 
-  /* Two sections that should be side-by-side */
-  main > .section.table-clinic-container {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(50% - 44px);
-    margin: 40px 0;
-  }
+.text-brand {
+  color: var(--nsw-brand-dark);
+}
 
-  main > .section.table-clinic-container + .section {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(50% - 44px);
-    margin: 40px 0 40px 80px;
+.text-accent {
+  color: var(--nsw-brand-accent);
+}
+
+/* Background colors */
+.bg-brand-dark {
+  background-color: var(--nsw-brand-dark);
+}
+
+.bg-brand-light {
+  background-color: var(--nsw-brand-light);
+}
+
+.bg-white {
+  background-color: var(--nsw-white);
+}
+
+.bg-off-white {
+  background-color: var(--nsw-off-white);
+}
+
+/* Status colors */
+.status-success {
+  color: var(--nsw-status-success);
+}
+
+.status-error {
+  color: var(--nsw-status-error);
+}
+
+.status-warning {
+  color: var(--nsw-status-warning);
+}
+
+.status-info {
+  color: var(--nsw-status-info);
+}
+
+/* ===== RESPONSIVE HELPERS ===== */
+
+@media (width >= 576px) {
+  main > .section > div {
+    padding: 0 var(--nsw-spacing-md);
+  }
+}
+
+@media (width >= 768px) {
+  main .section.brand-dark,
+  main .section.nsw-dark,
+  main .section.brand-light,
+  main .section.white,
+  main .section.light,
+  main .section.highlight,
+  main .section.off-white,
+  main .section.grey,
+  main .section.dark {
+    padding: var(--nsw-spacing-xl) 0;
+  }
+}
+
+@media (width >= 992px) {
+  main > .section > div {
+    padding: 0 var(--nsw-spacing-lg);
   }
 }

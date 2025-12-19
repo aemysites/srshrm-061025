@@ -1,0 +1,36 @@
+{
+  "templates": [
+    {
+      "name": "DCJ Homepage",
+      "urls": ["https://dcj.nsw.gov.au/"],
+      "description": "NSW Government Department of Communities and Justice homepage with hero, quick links, careers, news, and learn about sections",
+      "blocks": [
+        {
+          "name": "hero-dcj",
+          "instances": [".hero-banner", ".nsw-hero", "[class*='hero']"],
+          "section": null
+        },
+        {
+          "name": "quick-links",
+          "instances": [".button-link-list", "[class*='quick-link']", ".nsw-button-group"],
+          "section": null
+        },
+        {
+          "name": "columns",
+          "instances": [".columncontrol", ".nsw-grid", "[class*='col-']"],
+          "section": "nsw-box"
+        },
+        {
+          "name": "cards-horizontal",
+          "instances": [".nsw-card--horizontal", ".card[class*='horizontal']"],
+          "section": null
+        },
+        {
+          "name": "block-links",
+          "instances": [".block-link", ".block-link-container"],
+          "section": null
+        }
+      ]
+    }
+  ]
+}

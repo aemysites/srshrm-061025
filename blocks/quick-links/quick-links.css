@@ -1,0 +1,115 @@
+/**
+ * Quick Links Block - NSW Government Design System
+ * Pixel-perfect implementation matching https://dcj.nsw.gov.au/
+ */
+
+/* Container reset */
+.quick-links-container {
+  max-width: 100%;
+}
+
+.quick-links-container .quick-links-wrapper {
+  max-width: var(--nsw-container-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--nsw-spacing-md);
+}
+
+.quick-links {
+  padding: var(--nsw-spacing-xl) 0;
+  font-family: var(--body-font-family);
+}
+
+/* Heading */
+.quick-links-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--nsw-text-dark);
+  margin: 0 0 var(--nsw-spacing-md) 0;
+  line-height: 1.25;
+}
+
+/* Links list container */
+.quick-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--nsw-spacing-md);
+  list-style: none;
+  padding: 0;
+  margin: -4px;
+}
+
+.quick-links-item {
+  margin: 4px;
+}
+
+/* Pill button style - exact match to original */
+.quick-links .quick-links-button,
+.quick-links .quick-links-button:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 24px;
+  background-color: var(--nsw-white);
+  border: 2px solid var(--nsw-brand-dark);
+  border-radius: 24px;
+  color: var(--nsw-brand-dark);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.35;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.quick-links .quick-links-button:hover {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+  text-decoration: none;
+}
+
+.quick-links-button:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
+}
+
+/* External link icon */
+.quick-links-external-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23002664'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.quick-links-button:hover .quick-links-external-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E");
+}
+
+/* Tablet layout */
+@media (width >= 768px) and (width < 992px) {
+  .quick-links-heading {
+    font-size: 28px;
+  }
+}
+
+/* Mobile layout */
+@media (width < 768px) {
+  .quick-links {
+    padding: var(--nsw-spacing-lg) 0;
+  }
+
+  .quick-links-heading {
+    font-size: 24px;
+  }
+
+  .quick-links-list {
+    gap: var(--nsw-spacing-sm);
+  }
+
+  .quick-links-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

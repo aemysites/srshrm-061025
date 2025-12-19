@@ -1,20 +1,53 @@
+/**
+ * Footer Block - NSW Government Design System
+ */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+  font-size: var(--body-font-size-s);
 }
 
 footer .footer > div {
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: var(--nsw-container-width);
+  padding: var(--nsw-spacing-xl) var(--nsw-spacing-sm) var(--nsw-spacing-lg);
 }
 
 footer .footer p {
+  margin: 0 0 var(--nsw-spacing-xs);
+  color: var(--nsw-white);
+}
+
+footer .footer a:any-link {
+  color: var(--nsw-white);
+}
+
+footer .footer a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--nsw-spacing-sm) var(--nsw-spacing-md);
+}
+
+footer .footer li {
   margin: 0;
 }
 
-@media (width >= 900px) {
+@media (width >= 768px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: var(--nsw-spacing-xl) var(--nsw-spacing-md) var(--nsw-spacing-lg);
+  }
+}
+
+@media (width >= 992px) {
+  footer .footer > div {
+    padding: var(--nsw-spacing-xl) var(--nsw-spacing-lg) var(--nsw-spacing-lg);
   }
 }

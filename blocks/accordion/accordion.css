@@ -1,33 +1,45 @@
+/**
+ * Accordion Block - NSW Government Design System
+ */
+
 .accordion details {
-  border: 1px solid #dadada;
+  border: 1px solid var(--nsw-grey-03);
+  border-radius: var(--nsw-border-radius);
+  background-color: var(--nsw-white);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .accordion details + details {
-  margin-top: 24px;
+  margin-top: var(--nsw-spacing-sm);
 }
 
 .accordion details p {
-  margin-bottom: 0.8em;
+  margin-bottom: var(--nsw-spacing-xs);
 }
 
 .accordion details summary {
   position: relative;
-  padding: 0 16px;
-  padding-right: 46px;
+  padding: var(--nsw-spacing-sm);
+  padding-right: 3rem;
   cursor: pointer;
   list-style: none;
   overflow: auto;
-  transition: background-color 0.2s;
+  font-weight: var(--nsw-font-bold);
+  color: var(--nsw-brand-dark);
+  transition: background-color var(--nsw-transition-duration) var(--nsw-transition-timing);
 }
 
 .accordion details[open] summary {
-  background-color: var(--light-color);
+  background-color: var(--nsw-off-white);
 }
 
-.accordion details summary:focus,
+.accordion details summary:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 0;
+}
+
 .accordion details summary:hover {
-  background-color: var(--light-color);
+  background-color: var(--nsw-off-white);
 }
 
 .accordion details summary::-webkit-details-marker {
@@ -38,13 +50,13 @@
   content: '';
   position: absolute;
   top: 50%;
-  right: 18px;
+  right: var(--nsw-spacing-sm);
   transform: translateY(-50%) rotate(135deg);
-  width: 6px;
-  height: 6px;
-  border: 2px solid;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--nsw-brand-dark);
   border-width: 2px 2px 0 0;
-  transition: transform 0.2s;
+  transition: transform var(--nsw-transition-duration) var(--nsw-transition-timing);
 }
 
 .accordion details[open] summary::after {
@@ -52,10 +64,10 @@
 }
 
 .accordion details .accordion-item-body {
-  padding: 0 16px;
+  padding: var(--nsw-spacing-sm);
 }
 
 .accordion details[open] .accordion-item-body {
-  border-top: 1px solid #dadada;
-  background-color: var(--background-color);
+  border-top: 1px solid var(--nsw-grey-03);
+  background-color: var(--nsw-white);
 }

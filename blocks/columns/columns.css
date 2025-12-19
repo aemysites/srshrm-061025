@@ -1,10 +1,18 @@
+/**
+ * Columns Block - NSW Government Design System
+ * Pixel-perfect implementation matching https://dcj.nsw.gov.au/
+ */
+
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: var(--nsw-spacing-md);
 }
 
 .columns img {
   width: 100%;
+  max-width: 100%;
+  border-radius: var(--nsw-border-radius);
 }
 
 .columns > div > div {
@@ -19,15 +27,75 @@
   display: block;
 }
 
-@media (width >= 900px) {
+/* Typography - H3 heading */
+.columns h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--nsw-text-dark);
+  margin: 0;
+}
+
+/* Typography - Paragraph */
+.columns p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--nsw-text-dark);
+  margin: 16px 0 0;
+}
+
+/* Link button style - matches DCJ "Explore all careers" */
+.columns a,
+.columns a:any-link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nsw-brand-dark);
+  text-decoration: none;
+  padding: 10px 22px;
+  background-color: var(--nsw-white);
+  border: 2px solid var(--nsw-brand-dark);
+  border-radius: 4px;
+  margin-top: var(--nsw-spacing-md);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.columns a:hover {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+  text-decoration: none;
+}
+
+.columns a:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
+}
+
+/* Tablet and Desktop layout */
+@media (width >= 768px) {
   .columns > div {
+    flex-direction: row;
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    gap: var(--nsw-spacing-lg);
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns > div > .columns-img-col {
+    flex: 0 0 auto;
+  }
+}
+
+@media (width >= 992px) {
+  .columns > div {
+    gap: var(--nsw-spacing-xl);
+  }
+
+  .columns h3 {
+    font-size: 24px;
   }
 }

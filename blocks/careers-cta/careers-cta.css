@@ -1,0 +1,148 @@
+/**
+ * Careers CTA Block - NSW Government Design System
+ * Pixel-perfect implementation matching https://dcj.nsw.gov.au/
+ */
+
+/* Block container */
+.careers-cta {
+  font-family: var(--body-font-family);
+}
+
+/* Card wrapper with border */
+.careers-cta-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nsw-spacing-lg);
+  padding: 32px 24px;
+  border: 1px solid var(--nsw-grey-03);
+  background-color: var(--nsw-white);
+}
+
+/* Content area (left side on desktop) */
+.careers-cta-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* H3 heading */
+.careers-cta-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--nsw-text-dark);
+  margin: 0;
+}
+
+/* Paragraph */
+.careers-cta-content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--nsw-text-dark);
+  margin: 16px 0 0;
+}
+
+/* CTA Button - override default button styles */
+.careers-cta .careers-cta-button,
+.careers-cta .careers-cta-button:any-link,
+.careers-cta a.button.careers-cta-button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nsw-brand-dark);
+  text-decoration: none;
+  padding: 10px 22px;
+  background-color: var(--nsw-white);
+  border: 2px solid var(--nsw-brand-dark);
+  border-radius: 4px;
+  margin-top: 24px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: fit-content;
+}
+
+.careers-cta .careers-cta-button:hover,
+.careers-cta a.button.careers-cta-button:hover {
+  background-color: var(--nsw-brand-dark);
+  color: var(--nsw-white);
+  text-decoration: none;
+}
+
+.careers-cta .careers-cta-button:focus,
+.careers-cta a.button.careers-cta-button:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 3px;
+}
+
+/* Image wrapper (right side on desktop) */
+.careers-cta-image {
+  flex-shrink: 0;
+}
+
+.careers-cta-image picture {
+  display: block;
+}
+
+.careers-cta-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet layout - 768px+ */
+@media (width >= 768px) {
+  .careers-cta-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 32px 48px;
+    gap: var(--nsw-spacing-xl);
+  }
+
+  .careers-cta-content {
+    flex: 1;
+    max-width: 60%;
+  }
+
+  .careers-cta-image {
+    flex: 0 0 auto;
+    width: 280px;
+  }
+
+  .careers-cta-image img {
+    width: 280px;
+    height: auto;
+  }
+}
+
+/* Desktop layout - 992px+ */
+@media (width >= 992px) {
+  .careers-cta-image {
+    width: 335px;
+  }
+
+  .careers-cta-image img {
+    width: 335px;
+  }
+}
+
+/* Mobile layout - below 768px */
+@media (width < 768px) {
+  .careers-cta-card {
+    flex-direction: column-reverse;
+  }
+
+  .careers-cta-content h3 {
+    font-size: 20px;
+  }
+
+  .careers-cta-content p {
+    font-size: 14px;
+  }
+
+  .careers-cta-button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}

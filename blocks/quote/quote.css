@@ -1,17 +1,27 @@
+/**
+ * Quote Block - NSW Government Design System
+ */
+
 .quote blockquote {
   margin: 0 auto;
-  padding: 0 24px;
-  max-width: 900px;
+  padding: var(--nsw-spacing-md);
+  max-width: var(--nsw-container-width);
+  border-left: 4px solid var(--nsw-brand-dark);
+  background-color: var(--nsw-off-white);
+  border-radius: 0 var(--nsw-border-radius) var(--nsw-border-radius) 0;
 }
 
-@media (width >= 900px) {
+@media (width >= 992px) {
   .quote blockquote {
-    padding: 0 32px;
+    padding: var(--nsw-spacing-lg);
   }
 }
 
 .quote blockquote .quote-quotation {
-  font-size: 120%;
+  font-size: var(--heading-font-size-m);
+  font-style: italic;
+  color: var(--nsw-text-dark);
+  line-height: var(--nsw-line-height-md);
 }
 
 .quote blockquote .quote-quotation > :first-child {
@@ -21,18 +31,23 @@
 .quote blockquote .quote-quotation p:first-child::before,
 .quote blockquote .quote-quotation p:last-child::after {
   line-height: 0;
+  color: var(--nsw-brand-dark);
+  font-weight: var(--nsw-font-bold);
 }
 
 .quote blockquote .quote-quotation p:first-child::before {
-  content: '“';
+  content: '"';
 }
 
 .quote blockquote .quote-quotation p:last-child::after {
-  content: '”';
+  content: '"';
 }
 
 .quote blockquote .quote-attribution {
   text-align: right;
+  margin-top: var(--nsw-spacing-sm);
+  font-size: var(--body-font-size-s);
+  color: var(--nsw-grey-02);
 }
 
 .quote blockquote .quote-attribution p:first-child::before {

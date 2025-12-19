@@ -1,3 +1,7 @@
+/**
+ * Hero Block - NSW Government Design System
+ */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,8 +9,11 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
+  padding: var(--nsw-spacing-xl) var(--nsw-spacing-md);
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h1,
@@ -16,14 +23,25 @@
 .hero h5,
 .hero h6,
 .hero p {
-  max-width: 1200px;
+  max-width: var(--nsw-container-width);
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  color: var(--nsw-white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  font-size: var(--heading-font-size-xxl);
+  margin-bottom: var(--nsw-spacing-sm);
+}
+
+.hero p {
+  font-size: var(--body-font-size-m);
 }
 
 .hero.no-image * {
-  color: var(--text-color);
+  color: var(--nsw-text-dark);
+  text-shadow: none;
 }
 
 .hero picture {
@@ -40,8 +58,20 @@
   height: 100%;
 }
 
-@media (width >= 900px) {
+/* Hero button styling */
+.hero a.button {
+  margin-top: var(--nsw-spacing-sm);
+}
+
+@media (width >= 768px) {
   .hero {
-    padding: 40px 32px;
+    padding: var(--nsw-spacing-xxl) var(--nsw-spacing-lg);
+    min-height: 400px;
+  }
+}
+
+@media (width >= 992px) {
+  .hero {
+    padding: var(--nsw-spacing-xxl) var(--nsw-spacing-lg);
   }
 }

@@ -2,8 +2,13 @@
 coverage/*
 logs/*
 node_modules/*
+.env
 
 helix-importer-ui
 .DS_Store
 *.bak
 .idea
+content/
+migration-work/
+.vscode/
+.claude/

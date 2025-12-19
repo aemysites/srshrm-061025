@@ -1,18 +1,17 @@
+/**
+ * Tabs Block - NSW Government Design System
+ */
+
 .tabs .tabs-list {
   display: flex;
-  gap: 0.5ch;
+  gap: 0;
   max-width: 100%;
-  font-size: var(--body-font-size-xs);
+  font-size: var(--body-font-size-s);
   overflow-x: auto;
+  border-bottom: 2px solid var(--nsw-brand-dark);
 }
 
-@media (width >= 600px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-s);
-  }
-}
-
-@media (width >= 900px) {
+@media (width >= 768px) {
   .tabs .tabs-list {
     font-size: var(--body-font-size-m);
   }
@@ -21,35 +20,50 @@
 .tabs .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
-  border: 1px solid #dadada;
-  border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
+  border: 1px solid var(--nsw-grey-03);
+  border-bottom: none;
+  border-radius: var(--nsw-border-radius) var(--nsw-border-radius) 0 0;
+  padding: var(--nsw-spacing-xs) var(--nsw-spacing-sm);
+  background-color: var(--nsw-off-white);
+  color: var(--nsw-text-dark);
+  font-weight: var(--nsw-font-bold);
+  line-height: var(--nsw-line-height-sm);
   text-align: initial;
   text-overflow: unset;
   overflow: unset;
   white-space: unset;
-  transition: background-color 0.2s;
+  transition: background-color var(--nsw-transition-duration) var(--nsw-transition-timing);
+}
+
+.tabs .tabs-list button:hover {
+  background-color: var(--nsw-grey-04);
+}
+
+.tabs .tabs-list button:focus {
+  outline: 3px solid var(--nsw-focus);
+  outline-offset: 0;
 }
 
 .tabs .tabs-list button p {
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+  border-color: var(--nsw-brand-dark);
+  border-bottom: 2px solid var(--nsw-white);
+  margin-bottom: -2px;
+  background-color: var(--nsw-white);
+  color: var(--nsw-brand-dark);
+  cursor: default;
 }
 
 .tabs .tabs-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
+  margin-top: 0;
+  padding: var(--nsw-spacing-md);
+  border: 1px solid var(--nsw-grey-03);
+  border-top: none;
+  border-radius: 0 0 var(--nsw-border-radius) var(--nsw-border-radius);
+  background-color: var(--nsw-white);
   overflow: auto;
 }
 
